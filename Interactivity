@@ -1,6 +1,14 @@
-<!doctype html>
-<html>
-<head> 
-<title>Click a button</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactivity</title>
 </head>
+<body>
+  <h1>Welcome to Interactivity!</h1>
+  <p>This is where my games and interactive experiments will go.</p>
+
+  <a href="index.html">Back to the homepage</a>
+</body>
 </html>
