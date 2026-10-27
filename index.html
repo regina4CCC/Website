@@ -1,87 +1,87 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Hello Mars. We will be there soon.</title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hello Mars. We will be there soon.</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #151515;
+      color: white;
+    }
+
+    .page-button,
+    #mars-button {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 16px 28px;
+      background: #b84321;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 20px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .page-button:hover,
+    #mars-button:hover {
+      background: #812e17;
+    }
+
+    .mars-photo {
+      display: block;
+      width: 350px;
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 16px;
+      animation: appear 0.5s ease-out;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello Mars. We will be there soon.</h1>
+
+  <p>
+    <a href="Interactivity.html" class="page-button">
+      Explore Interactivity
+    </a>
+  </p>
+
+  <button id="mars-button" type="button">
+    Click to discover Mars!
+  </button>
+
+  <script>
+    const marsButton = document.getElementById("mars-button");
+
+    marsButton.addEventListener("click", function () {
+      const marsPhoto = document.createElement("img");
+
+      marsPhoto.src = "mars.jpg";
+      marsPhoto.alt = "A photograph of Mars";
+      marsPhoto.className = "mars-photo";
+
+      marsButton.replaceWith(marsPhoto);
+    });
+  </script>
+</body>
 </html>
-
-<a href="Interactivity.html" class="page-button">
-  Explore Interactivity
-</a>
-
-<style>
-  .page-button {
-    display: inline-block;
-    margin: 16px 0;
-    padding: 16px 28px;
-    background-color: #b84321;
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    text-decoration: none;
-    border-radius: 12px;
-    transition: background-color 0.2s;
-  }
-
-  .page-button:hover,
-  .page-button:focus-visible {
-    background-color: #812e17;
-  }
-</style>
-
-<!-- The button visitors see first -->
-<button id="mars-button" type="button">
-  Click to discover Mars!
-</button>
-
-<style>
-  #mars-button {
-    padding: 18px 30px;
-    background: #b84321;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: transform 0.2s, background 0.2s;
-  }
-
-  #mars-button:hover {
-    background: #913218;
-    transform: scale(1.05);
-  }
-
-  .mars-photo {
-    display: block;
-    width: 350px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-    animation: appear 0.5s ease-out;
-  }
-
-  @keyframes appear {
-    from {
-      opacity: 0;
-      transform: scale(0.7);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-</style>
-
-<script>
-  const marsButton = document.getElementById("mars-button");
-
-  marsButton.addEventListener("click", function () {
-    const marsPhoto = document.createElement("img");
-
-    marsPhoto.src = "mars.jpg";
-    marsPhoto.alt = "A photograph of Mars";
-    marsPhoto.className = "mars-photo";
-
-    marsButton.replaceWith(marsPhoto);
-  });
-</script>
